@@ -1,4 +1,7 @@
 package edu.fiu.jit;  
+
+//Class Component has 3 implementations - Engine, Cleansing and Mobility which more or less comprises of the types of components that make up the vacuum functioning     
+
 public abstract class Component { 
 	int Component_ID;
 	String type;

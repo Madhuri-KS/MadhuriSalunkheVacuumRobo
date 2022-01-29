@@ -1,5 +1,7 @@
 package edu.fiu.jit;
 
+
+// Class Engine is a Type of Component  having its own special features and operations
 public class Engine  extends Component {   
 			int numberOfCylinders;
 			float capacity;

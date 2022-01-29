@@ -1,5 +1,7 @@
 package edu.fiu.jit;
 
+// Class Mobility is a Type of Component  having its own special features and operations
+
 public abstract class Mobility extends Component  { 
 		int status;
 		String movement_category;
