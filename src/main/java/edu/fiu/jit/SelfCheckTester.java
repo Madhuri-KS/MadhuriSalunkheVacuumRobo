@@ -111,8 +111,12 @@ public class SelfCheckTester {
 				}				
 			}
 		}
-		System.out.println("Tested " + count + " components... " + prettify(count > 0 && result));
-		return (count > 0 && result);
+		if (count > 0) {
+			System.out.println("Tested " + count + " components... " + prettify(result));
+		} else {
+			System.out.println("No subcomponents to test");
+		}
+		return result;
 	}
 	
 	
