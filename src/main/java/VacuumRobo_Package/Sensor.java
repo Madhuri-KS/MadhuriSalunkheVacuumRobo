@@ -1,36 +1,49 @@
 package VacuumRobo_Package;
 
+import edu.fiu.jit.SelfCheckCapable;
+import edu.fiu.jit.SelfCheckUtils;
+
 // Class Sensor is a part of the Mobility Component 
-public class Sensor extends Mobility {  
+public class Sensor extends Mobility implements SelfCheckCapable{  
 		String sensor_type, ID ,status;
-		public Sensor(String type,String name)
+		public Sensor(String type)
 		{
 			// Setting up the object to move in direction based on the input 
 			if (type=="CLIFF") 
 			{
 				status="MOVE Back Cliff Detected";
-				this.ID=name;
+			
 			}
 			else if (type=="BUMP") 
 			{
 				status="MOVE Back Bump Detected";
-				this.ID=name;
+			
 			}			
 			else if (type=="WALL") 
 			{
 				status="MOVE Back Wall Detected";
-				this.ID=name;
+			
 			}
 			else 
 			{
 				status="MOVE Ahead no obstacle Detected";
-				this.ID=name;
+			
 			}
 		}
 		public void check_obstacle(String ID)
 		{
 			// Check Obstacle
-			System.out.println("\n " +status +" "+ ID);
+			System.out.println("\n " +status );
+		}
+		@Override
+		public String getComponentName() {
+			// TODO Auto-generated method stub
+			return "Madhuri_Vacuum_TestInstance_Sensor";
+		}
+		@Override
+		public boolean selfCheck() {
+			// TODO Auto-generated method stub
+			return SelfCheckUtils.randomCheck(0.1);
 		}
 
  

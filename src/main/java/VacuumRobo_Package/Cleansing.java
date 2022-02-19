@@ -1,6 +1,6 @@
 package VacuumRobo_Package;
  
-public abstract class Cleansing extends Component  
+public  class Cleansing  
 { 
 
 	// Class Cleansing is a Type of Component  having its own special features and operations
